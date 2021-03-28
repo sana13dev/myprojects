@@ -1,0 +1,26 @@
+package com;
+
+import java.util.*;
+
+public class distinct {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method
+		Scanner sc = new Scanner(System.in);
+		
+		int number=sc.nextInt();
+		//add distinct numbers from the input
+		
+		ArrayList<Integer> store = new ArrayList<Integer>();
+		while(number>0) {
+			store.add(number%10);
+			number=number/10;
+		}
+		int sum=0;
+		for(int i=0; i  <store.size(); i++) {
+			sum += store.get(i);
+		}
+		System.out.println(sum);
+	}
+
+}
